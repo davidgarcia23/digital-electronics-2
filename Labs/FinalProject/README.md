@@ -31,7 +31,7 @@ Every time the state of the door change, the system send a message by uart. It w
 
 ![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/circuito.png "Circuit")
 
- - [ ] HARDWARE
+ - [ ] **HARDWARE**
  - MICRO atmega328p
  - LCD Hd44780-1
  - UART
