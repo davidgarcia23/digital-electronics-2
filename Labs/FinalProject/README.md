@@ -2,4 +2,4 @@
 
 ## Team members
 
-Elena Arjona Bustos \nDavid Garcia Torre
+Elena Arjona Bustos \n David Garcia Torre
