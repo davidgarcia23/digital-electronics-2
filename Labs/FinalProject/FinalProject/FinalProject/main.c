@@ -4,20 +4,20 @@
  * Control a door with a password
  * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
  *
- * Copyright (c) David García Torres and Elena Arjona Bustos
+ * Copyright (c) David Garcia Torres and Elena Arjona Bustos
  * BUT Digital Electronics 2
  * This work is licensed under the terms of the MIT license.
  *
  **********************************************************************/
 
 #include <avr/io.h>
-#include <avr/interrupt.h>  // Interrupts standard C library for AVR-GCC
-#include "gpio.h"           // GPIO library for AVR-GCC
-#include "timer.h"          // Timer library for AVR-GCC
-#include "lcd.h"			// Lcd library for AVR-GCC
+#include <avr/interrupt.h>	// Interrupts standard C library for AVR-GCC
+#include "gpio.h"         	// GPIO library for AVR-GCC
+#include "timer.h"         	// Timer library for AVR-GCC
+#include "lcd.h"		// Lcd library for AVR-GCC
 #include "keyboard.h"		// Keyboard library for AVR-GCC
-#include "uart.h"			// Uart library for AVR-GCC
-#define F_CPU 16000000      // CPU frequency in Hz 
+#include "uart.h"		// Uart library for AVR-GCC
+#define F_CPU 16000000      	// CPU frequency in Hz 
 
 
 int state = 3;
@@ -87,13 +87,13 @@ int main(void){
 			GPIO_write_low(&PORTC, RELE);
 			
 			
-		}else if(state == 0){	// Wrong code 
+		}else if(state == 0){		// Wrong code 
 			
 			GPIO_write_high(&PORTB, LED_RED);
 			GPIO_write_high(&PORTC, RELE);
 			
 			
-		}else{					// Introducing the code
+		}else{				// Introducing the code
 			
 			GPIO_write_low(&PORTB, LED_RED);
 			GPIO_write_low(&PORTB, LED_GREEN);
