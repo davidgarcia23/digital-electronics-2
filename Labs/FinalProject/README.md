@@ -56,7 +56,6 @@ We have created keyboard librarie and used the other ones from other exercises (
 ### Main
 
 
-
 int main(void){
 
 	initialize();
@@ -97,7 +96,13 @@ int main(void){
 	
 }
 
-//Timer handler
+Everything is initialized calling "initialize" function. A message is sent to the uart to explain user how to introduce the code. After that, in a loop we always evaluate the state.
+We use this state to open/close the relay, or to turn on/of the LEDs.
+
+
+
+
+**Timer handler**
 
 ISR(TIMER1_OVF_vect){
 
@@ -129,6 +134,8 @@ ISR(TIMER1_OVF_vect){
 	p_state = state;
 	
 }
+
+Every 33ms the timer handler scan the keyboard and receive the state. If it detects any changes on it, it is sent a message to the uart.
 
 
 [FULL CODE](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/FinalProject/main.c)
