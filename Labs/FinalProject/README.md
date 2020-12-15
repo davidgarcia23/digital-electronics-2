@@ -8,4 +8,4 @@ Elena Arjona Bustos
 
 David Garcia Torre
 
-[Repository](https://github.com/davidgarcia23/digital-electronics-2)
+[Repository](https://github.com/davidgarcia23/digital-electronics-2/edit/main/Labs/FinalProject)
