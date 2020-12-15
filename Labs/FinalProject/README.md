@@ -26,7 +26,9 @@ Every time the state of the door change, the system send a message by uart. It w
 
 ## Hardware description
 
-We use the atmega328p microcontroller to process the signals that come from the keyboard as input, and to elaborate an output that serves to modify the status of the relay and turn the LEDs on or off when necessary. We have used some resistors to protect the LEDs.
+The atmega328p microcontroller process the signals that come from the keyboard as input, and elaborate an output that serves to modify the status of the relay and turn the LEDs on or off when necessary. The resistors are used to protect the LEDs, and the transistor and diode to implementate relay circuit.
+
+The yellow led is turned on when the door is closed, green one when the password is right and red one when the password is wrong.
 
 
 
