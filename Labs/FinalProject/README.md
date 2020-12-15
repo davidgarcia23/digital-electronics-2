@@ -3,6 +3,6 @@
 ## Team members
 
 Elena Arjona Bustos 
-[](https://github.com/davidgarcia23/digital-electronics-2)
+[Repository](https://github.com/davidgarcia23/digital-electronics-2)
 
 David Garcia Torre
