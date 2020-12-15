@@ -403,15 +403,22 @@ When it detects that the 4 digits of the password has been introduced, it compar
 
 ### Right code
 
-In this image are used three right codes, is show how is automatly in three seconds reset the relay, and for last, a wrong code.
+In this image are used three right codes,it is shown how is automatly in three seconds reset the relay, and for last, a wrong code.
 
 ![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/gif11.gif "Right")
 
 ### Wrong code
 
-In this image is show one wrong code and for last, how to reset the code if is not completed in four seconds.
+In this image it is shown one wrong code and for last, how to reset the code if is not completed in four seconds.
 
 ![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/gif2.gif "Wrong")
+
+### Uart 
+
+Here it is shown how uart works
+
+![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/gifuart.gif "Uart")
+
 
 ## References
 
