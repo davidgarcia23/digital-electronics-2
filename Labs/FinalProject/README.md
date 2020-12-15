@@ -144,7 +144,7 @@ Every 33ms the timer handler scan the keyboard and receive the state. If it dete
 ### Keyboard
 
 
-// scan digit  
+**Scan digit** 
 
 int scan(int row1, int row2, int row3, int row4){
 
