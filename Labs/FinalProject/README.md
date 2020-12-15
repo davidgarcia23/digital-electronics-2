@@ -15,10 +15,10 @@ Our goal is to develope a door lock system with a 4x3 keyboard control, a relay,
 The system we have designed has to open the relay that represent a door, when a right code is introduced and signal the operation.
 
 
-There are four correct password, if case one of them is introduced, the door relay is opened and the green led is turn on. In case a wrong code is introduced, the relay is going to remain closed and the red led will be turned on.
+There are four correct password, if case one of them is introduced, the door relay will be opened and the green led is turn on. In case a wrong code is introduced, the relay is going to remain closed and the red led will be turned on.
 
 
-While the user is introducing the code the relay will remain always closed, if it takes more than four seconds to the user to write the code, it will be reset.
+While the user is introducing the code the relay will remain always closed, if it takes more than four seconds to the user to write the code, it will be reseted.
 When the code is right, and the door is opened, it takes three seconds to automaticly close the door. By the time the code is beeing introduced, is going to be shown the number of digits introduced on a LCD screen with an asterisk.
 
 
