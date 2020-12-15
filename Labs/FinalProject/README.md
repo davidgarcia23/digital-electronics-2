@@ -54,5 +54,80 @@ We have created keyboard librarie and used the other ones from other exercises (
 ### Main
 
 
-![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/FinalProject/main.c "Circuit")
+
+int main(void){
+
+	initialize();
+	
+	lcd_gotoxy(1, 0);
+	lcd_puts("Enter password:");
+	
+	lcd_gotoxy(8,2);
+	lcd_puts("----");
+	
+	uart_puts("Welcome. Press * to verify the code.\n\n");
+	
+    while (1){
+		
+		// Error signaling
+		if(state == 1){			// Right code
+			
+			GPIO_write_high(&PORTB, LED_GREEN);
+			GPIO_write_low(&PORTC, RELE);
+			
+			
+		}else if(state == 0){	// Wrong code 
+			
+			GPIO_write_high(&PORTB, LED_RED);
+			GPIO_write_high(&PORTC, RELE);
+			
+			
+		}else{					// Introducing the code
+			
+			GPIO_write_low(&PORTB, LED_RED);
+			GPIO_write_low(&PORTB, LED_GREEN);
+			GPIO_write_high(&PORTC, RELE);
+			
+		}
+		
+    }
+	
+	
+}
+
+//Timer handler
+
+ISR(TIMER1_OVF_vect){
+
+	static char* open = "The door is open.\n\n";
+	static char* close = "The door is close.\n\n";
+	static char* code = "The code is being introduced.\n\n";
+	static int p_state = 3;
+
+	state = scan(GPIO_read(&PINC,ROW1), GPIO_read(&PINC,ROW2), GPIO_read(&PINC,ROW3), GPIO_read(&PINC,ROW4));
+	
+	if(p_state != state){			//If there is a change on state a message is sent to uart
+		
+		if(state == 0){
+			
+			uart_puts(close);
+			
+		}else if(state == 1){
+			
+			uart_puts(open);
+			
+		}else{
+			
+			uart_puts(code);
+			
+		}
+		
+	}
+	
+	p_state = state;
+	
+}
+
+
+[FULL CODE](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/FinalProject/main.c)
 
