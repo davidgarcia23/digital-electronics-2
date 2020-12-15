@@ -23,3 +23,6 @@ When the code is right, and the door is opened, it takes three seconds to automa
 
 
 Every time the state of the door change, the system send a message by uart. It was considered using an audio output, but the system was more inconveninet than usefull.
+
+## Hardware description
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
