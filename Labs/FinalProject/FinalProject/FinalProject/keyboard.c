@@ -4,7 +4,7 @@
  * keyboard library for AVR-GCC.
  * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
  *
- * Copyright (c) David García Torres and Elena Arjona Bustos
+ * Copyright (c) David GarcÃ­a Torres and Elena Arjona Bustos
  * BUT Digital Electronics 2
  * This work is licensed under the terms of the MIT license.
  *
@@ -20,7 +20,7 @@
  * @note
  * 
  * 
- * @copyright (c) David García Torres and Elena Arjona Bustos
+ * @copyright (c) David GarcÃ­a Torres and Elena Arjona Bustos
  * BUT Digital Electronics 2
  * This work is licensed under the terms of the MIT license.
  */
@@ -34,7 +34,7 @@ static int timdoor = 0;		//counter for time that is open the door
 
 int scan(int row1, int row2, int row3, int row4){
 
-	static int key;				//Key pressed
+	static int key;			//Key pressed
 	static int puls = 0;		//Key state
 	static int ppuls = 0;		//Previous key state
 	static int state = 3;		//Inform about the keyboard state (writing, correct, wrong)
@@ -133,21 +133,21 @@ int scan(int row1, int row2, int row3, int row4){
 	}
 	
 	
-		  if( timdoor >= 91){			//It takes 3 second to close the door (3/33ms is aproximatly 91)
+		  if( timdoor >= 91){						//It takes 3 second to close the door (3/33ms is aproximatly 91)
 		 
 				 state=check(key,1);	
 				 timdoor = 0;
 		 
 		  }else{
 			  
-				if(ovtime >= 120){		//It takes 4 second to reset the password if there are not any more keys pressed (4/33ms is aproximatly 120)
+				if(ovtime >= 120){				//It takes 4 second to reset the password if there are not any more keys pressed (4/33ms is aproximatly 120)
 				  
 					state=check(key,1);
 					ovtime = 0;
 				  
 				 }else{
 				  
-					if((ppuls == 0) && (puls == 1)){		//Detect if any key is pressed
+					if((ppuls == 0) && (puls == 1)){	//Detect if any key is pressed
 					  
 						state = check(key,0);
 					  
@@ -160,7 +160,7 @@ int scan(int row1, int row2, int row3, int row4){
 			}
 		   
 		   
-			ppuls = puls;		//Save the previous value to know if it changes
+			ppuls = puls;						//Save the previous value to know if it changes
 			
 			return state;
 	
@@ -178,11 +178,11 @@ int check(int digit, int ot){
 	static int i = 0;
 	int j = 0;
 	static int password = 0;
-	static int correct[4] ={1234,0000,3939,1998};		//The right passwords 
+	static int correct[4] ={1234,0000,3939,1998};				//The right passwords 
 	static int ok = 3;
 	
 	
-	if(ot == 1){			//If door/password time expired, password is reseted
+	if(ot == 1){								//If door/password time expired, password is reseted
 		
 		i = 0;
 		
@@ -200,16 +200,16 @@ int check(int digit, int ot){
 		
 		password = 0;
 		
-	}else{					//If time don not expire, evaluate the key pressed
+	}else{									//If time don not expire, evaluate the key pressed
 		
 		
-		if(i != 4) {		//Until password is full
+		if(i != 4) {							//Until password is full
 			
 			ok = 3;
 			
 			if(i == 0){
 				
-				ovtime = 1; //The first digit in the password is introduced, the password count start
+				ovtime = 1; 					//The first digit in the password is introduced, the password count start
 		    }
 			
 			
@@ -237,7 +237,7 @@ int check(int digit, int ot){
 				if(password == correct[j]){			//Check the password with the correct codes
 					
 					ok = 1;
-					timdoor = 1;					//Start the door counter
+					timdoor = 1;				//Start the door counter
 					
 				}
 		 }
