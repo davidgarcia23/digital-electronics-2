@@ -27,4 +27,6 @@ Every time the state of the door change, the system send a message by uart. It w
 ## Hardware description
 
 We use the atmega328p microcontroller 
+
+
 ![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/circuito.png "Circuit")
