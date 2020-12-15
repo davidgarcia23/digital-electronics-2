@@ -24,6 +24,8 @@ When the code is right, and the door is opened, it takes three seconds to automa
 
 Every time the state of the door change, the system send a message by uart. It was considered using an audio output, but the system was more inconveninet than usefull.
 
+![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/ed2.jpg "ED2")
+
 ## Hardware description
 
 The atmega328p microcontroller process the signals that come from the keyboard as input, and elaborate an output that serves to modify the status of the relay and turn the LEDs on or off when necessary. The resistors are used to protect the LEDs, and the transistor and diode to implementate relay circuit.
@@ -378,6 +380,6 @@ In this image are used three right codes, is show how is automatly in three seco
 
 ### Wrong code
 
-In this image is show one wrong code and for last, how to reset the code if is not completed in four seconds
+In this image is show one wrong code and for last, how to reset the code if is not completed in four seconds.
 
 ![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/gif2.gif "Wrong")
