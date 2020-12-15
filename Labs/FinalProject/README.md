@@ -273,7 +273,15 @@ int scan(int row1, int row2, int row3, int row4){
 	
 }
 
-In this function 
+
+In this function, the state of the rows from the keyboard are passed as inputs to the function. 
+
+
+We compare these states and if they are equal to zero that means that none of the buttons are pressed. When this happen we move the 0 activating the next column and put a 1 in the actual column deactivating it. If there are any pressed buttons, we select the digit based on which row is activated. Also, we send to the function "check" with a 1 as an input if any timer has been finished , if not, it calls the function "check" with 0 as an input when it detects that there has been one key pressed.
+
+
+The function return the state of the system, 0 for a wrong code, 1 for the right one and 3 for when the code is being introduced.
+
 
 
 /* Checking Passwords*/
@@ -367,6 +375,16 @@ int check(int digit, int ot){
 		
 	return ok;
 }
+	
+	
+There has been declared 4 correct codes. At the begining, we evaluate if the call of the function has specified that one timer has expired with the input "ot". If so, it detects which one of them, and send state "error" (ok = 0) if it has been the password time the one that has expired or to the state "writing" when it comes from the door time. After that, the password is reset.
+	
+	
+If the input ot is equal to 0, that means that one key has been pressed. In case that is one of the 4 keys necessaries for the code, the function evaluate if it is the first pressed key, if it so, it start the password count. Besides that, it add the new digit to the password variable, moving the previous digit one place to the left. 
+	
+	
+When it detects that the 4 digits of the password has been introduced, it compares the current password with the 4 correct codes, if any coincidences are detected, it returns the state correct (ok = 1), if not, it returns the state error (ok = 0).
+	
 	
 [FULL CODE](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/FinalProject/keyboard.c)
 
