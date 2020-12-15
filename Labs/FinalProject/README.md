@@ -275,11 +275,15 @@ In this function
 
 
 /* Checking Passwords*/
-/*
+
+
 *If ok=0 --> There is an error
+
 *If ok=1 --> The code is right
+
 *If ok=3 --> The code is still being introduced
-*/
+
+
 
 int check(int digit, int ot){ 
 	
@@ -362,3 +366,4 @@ int check(int digit, int ot){
 	return ok;
 }
 	
+[FULL CODE](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/FinalProject/keyboard.c)
