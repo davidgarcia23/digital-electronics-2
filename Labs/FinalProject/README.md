@@ -412,3 +412,10 @@ In this image are used three right codes, is show how is automatly in three seco
 In this image is show one wrong code and for last, how to reset the code if is not completed in four seconds.
 
 ![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/gif2.gif "Wrong")
+
+## References
+
+* [RELAY](https://docs.onion.io/omega2-docs/relay-expansion-c-library.html)
+* [RELAY2](http://diwo.bq.com/utilizar-rele-arduino-zum-core/)
+* [KEYPAD](https://learn.parallax.com/tutorials/language/propeller-c/propeller-c-simple-devices/read-4x4-matrix-keypad)
+
