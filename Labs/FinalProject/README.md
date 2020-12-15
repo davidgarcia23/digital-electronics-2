@@ -22,4 +22,4 @@ While the user is introducing the code the relay will remain always closed, if i
 When the code is right, and the door is opened, it takes three seconds to automaticly close the door. By the time the code is beeing introduced, is going to be shown the number of digits introduced on a LCD screen with an asterisk.
 
 
-Every time the state of the door change, the system send a message by uart
+Every time the state of the door change, the system send a message by uart. It was considered using an audio output, but the system was more inconveninet than usefull.
