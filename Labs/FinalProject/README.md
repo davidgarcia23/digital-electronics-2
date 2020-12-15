@@ -33,6 +33,8 @@ The atmega328p microcontroller process the signals that come from the keyboard a
 The yellow led is turned on when the door is closed, green one when the password is right and red one when the password is wrong.
 
 
+All imputs are initialized with an internal pull up resistor
+
 
 
 ![alt text](https://github.com/davidgarcia23/digital-electronics-2/blob/main/Labs/FinalProject/FinalProject/circuito.png "Circuit")
