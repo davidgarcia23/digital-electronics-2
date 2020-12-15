@@ -284,7 +284,8 @@ The function return the state of the system, 0 for a wrong code, 1 for the right
 
 
 
-/* Checking Passwords*/
+
+**Checking Passwords**
 
 
 *If ok=0 --> There is an error
@@ -292,6 +293,7 @@ The function return the state of the system, 0 for a wrong code, 1 for the right
 *If ok=1 --> The code is right
 
 *If ok=3 --> The code is still being introduced
+
 
 
 
